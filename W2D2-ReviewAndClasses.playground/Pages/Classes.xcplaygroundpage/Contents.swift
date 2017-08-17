@@ -48,22 +48,33 @@ box1.area()
 //: Using the Box class as an example, create a new class called Bicycle. Bicycles should have two `Int` properties, `numberOfGears` and `currentGear` (give them sensible default values).
 //:
 //: Bicycles should also have two functions. `gearUp()` and `gearDown()`, which increase and decrease the value in `currentGear`.
-
+class Bicycle {
+    var numberOfGears: Int = 8
+    var currentGear: Int = 1
+    
+    func gearUp() {
+        currentGear = currentGear + 1
+    }
+    
+    func gearDown() {
+        currentGear = currentGear - 1
+    }
+}
 
 
 
 
 //: Test your bicycle out by uncommenting the following code:
  
-//var myBike = Bicycle()
-//
-//myBike.numberOfGears = 16 // upgrade!
-//myBike.gearUp()
-//myBike.gearUp()
-//myBike.gearDown()
-//myBike.gearUp()
-//
-//print("my bike is in the \(myBike.currentGear)rd gear")
+var myBike = Bicycle()
+
+myBike.numberOfGears = 16 // upgrade!
+myBike.gearUp()
+myBike.gearUp()
+myBike.gearDown()
+myBike.gearUp()
+
+print("my bike is in the \(myBike.currentGear)rd gear")
 
 
 //: ## Challenge 2
@@ -106,10 +117,20 @@ brightBulb.watts
 //: 4. The init method sets numberOfGears to the value in `gears`
 //:
 //: Hint: don't forget to supply a number of gears when you create your bicycles!
+class Bicycle2 {
+    let numberOfGears: Double
+    var currentGear: Int = 1
+    
+    init(gears: Double) {
+        numberOfGears = gears
+    }
+}
 
+var twentyGearBike = Bicycle2(gears: 20)
+var fiveGearBike = Bicycle2(gears: 5)
 
-
-
+twentyGearBike.numberOfGears
+fiveGearBike.numberOfGears
 
 
 
@@ -126,9 +147,20 @@ brightBulb.watts
 //: The syntax for subclassing can be found in the Swift Cheat Sheet included with this Playground.
 //:
 //: Hint: height * width * depth = the area of a cube
+class Cube: Box {
+    var depth: Double = 0
+    
+    override func area() -> Double {
+        return height * width * depth
+    }
+}
 
+var cube1 = Cube()
+cube1.depth = 50
+cube1.width = 50
+cube1.height = 50
 
-
+cube1.area()
 
 //: DONE!!! - Head back to compass to do today's tutorial.
 

@@ -25,7 +25,7 @@ mph + 0.1
 //: ### Challenge 1
 //:
 //: Change the value in `mph` to be equal to 90, use the assignment operator `=`.
-
+mph = 90
 
 
 
@@ -36,7 +36,7 @@ mph + 0.1
 greeting = "Hello"
 
 
-
+greeting = greeting + ", Danny"
 
 //: Note: Make sure to do this in such a way that changing the value of `greeting` to "Aloha" changes the value here to be "Aloha, Danny"
 
@@ -49,10 +49,10 @@ greeting = "Hello"
 //: What type are `bicycleCount`, and `isGood`?
 
 var bicycleCount = 10
-// bicycleCount type is:
+// bicycleCount type is: Int
 
 var isGood = true
-// isGood's type is:
+// isGood's type is: Bool
 
 
 //: Swift infers the type of a variable based on the initial value. This is mostly useful, but sometimes we want to change the inferred type.
